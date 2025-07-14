@@ -1,0 +1,57 @@
+@use "_palette" as palette;
+
+// #region Text
+:root {
+  // TODO:Buscar tipo de letra acorde
+  --font-headings: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+body,
+p,
+li,
+a,
+button {
+  font-family: var(--font-body);
+  color: palette.$text-primary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-headings);
+  font-weight: 700;
+  color: palette.$text-heading;
+}
+// #endregion
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: palette.$background;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+//TODO: Pasa esto a un styles separado
+.img-btn {
+  height: 1rem;
+  img {
+    height: 100%;
+  }
+}
+
+.img-btn:hover {
+  img {
+    opacity: 0.5;
+  }
+}

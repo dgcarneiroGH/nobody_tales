@@ -1,0 +1,11 @@
+<main class="container">
+  <h1 class="main-title">Book Title</h1>
+  <section class="cards-list">
+    <app-card
+      *ngFor="let chapter of chapters"
+      [title]="chapter.title"
+      [content]="chapter.text"
+    >
+    </app-card>
+  </section>
+</main>

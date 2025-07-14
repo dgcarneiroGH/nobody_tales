@@ -1,0 +1,19 @@
+.main-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.container {
+  background: #f9f6f1;
+  min-height: 100vh;
+  padding-top: 3rem;
+}
