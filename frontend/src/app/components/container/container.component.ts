@@ -15,8 +15,8 @@ export class ContainerComponent implements OnInit {
   private _firebaseService = inject(FirebaseService);
 
   ngOnInit(): void {
-    this._firebaseService.getChapterDays(0).then((days) => {
-      console.log(days);
+    this._firebaseService.getChapterDays(0).subscribe((result) => {
+      console.log({ result });
     });
   }
 

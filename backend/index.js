@@ -13,7 +13,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Ejemplo: obtener días de un capítulo
+//Obtain chapter Days
 app.get("/api/chapter-days/:chapterNo", async (req, res) => {
   try {
     const chapterNo = parseInt(req.params.chapterNo, 10);

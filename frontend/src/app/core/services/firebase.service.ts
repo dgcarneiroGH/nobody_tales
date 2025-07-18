@@ -16,7 +16,7 @@ export class FirebaseService {
   //     return querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
   //   }
 
-  async getChapterDays(chapterNo: number) {
+  getChapterDays(chapterNo: number) {
     return this._http.get<any[]>(
       `http://localhost:3000/api/chapter-days/${chapterNo}`
     );
