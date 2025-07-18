@@ -1,15 +1,25 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { FirebaseService } from '../../core/services/firebase.service';
 import { CardComponent } from '../card/card.component';
 
 @Component({
   selector: 'app-container',
   standalone: true,
   imports: [CardComponent, CommonModule],
+  providers: [FirebaseService],
   templateUrl: './container.component.html',
   styleUrl: './container.component.scss',
 })
-export class ContainerComponent {
+export class ContainerComponent implements OnInit {
+  private _firebaseService = inject(FirebaseService);
+
+  ngOnInit(): void {
+    this._firebaseService.getChapterDays(0).then((days) => {
+      console.log(days);
+    });
+  }
+
   chapters = [
     {
       title: 'Chapter 1',
